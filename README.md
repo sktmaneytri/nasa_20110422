@@ -4,4 +4,4 @@ To run the test -> cd server -> npm test (remember to npm install before) | I ha
 # Student: Nguyen Minh Tri
 # ID: 20110422
 # Created Date: 05/11/2023
-# Link video: https://www.youtube.com/watch?v=LCC0qZrV0hU 
+# Link video: https://youtu.be/RP_6HRiCEuo
