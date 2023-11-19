@@ -33,11 +33,28 @@ function loadPlanetsData() {
     })
 }
 
-function getAllLaunches() {
-    return habitablePlanets;
+async function getAllPlanets() {
+    return await planets.find({}, {
+        '_id': 0, '__v':0,
+    });
+}
+
+async function savePlanet(planet) {
+    try{
+        await planets.updateOne({
+            keplerName: planet.kepler_name,
+        }, {
+            keplerName: planet.kepler_name,
+        }, {
+            upsert: true,
+        });
+    } catch(err) {
+        console.log(`Could not save planet ${err}`);
+    }
 }
 
 module.exports = {
     loadPlanetsData,
-    getAllLaunches
-}
+    getAllPlanets,
+  };
+  
